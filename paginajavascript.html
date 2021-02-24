@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+ <title>Página de prueba de la asignatura doble columna, encabezado y pie</title>
+<link rel ="icon" href ="faviconscm.ico">
+ <script src="javascript.js"></script>
+<script>
+  function CambiarFondo (){
+   var imagen = new Image();
+   //dependiendo del dia que cargue una imagen u otra
+  var hoy = new Date();
+var dd = hoy.getDay();
+switch (dd)
+{
+case 1:
+  imagen.src = "SCMlunes.png";
+ break;
+ case 2:
+  imagen.src = "SCMMartes.png";
+ break;
+ case 3:
+  imagen.src = "SCMMiercoles.png";
+ break;
+ case 4:
+  imagen.src = "SCMJueves.png";
+ break;
+ case 5:
+  imagen.src = "SCMViernes.png";
+ break;
+ case 6:
+  imagen.src = "SCMFin.png";
+ break;
+ case 0:
+  imagen.src = "SCMFin.png";
+ break;
+
+}
+document.body.style.backgroundImage="url('"+imagen.src+"')";
+}
+ </script>
+<link href="final.css" rel="stylesheet" type="text/css" id="estilo">
+</head>
+
+<body onload="CambiarFondo()">
+<button type="button" onclick="cambiarArchivoCss('final3.css')">Cambio a estilo3</button>
+<button type="button" onclick="cambiarArchivoCss('final.css')">Cambio a estilo1</button>
+<button type="button" onclick="cambiarArchivoCss('final2.css')">Cambio a estilo2</button>
+<button type="button" onclick="myFunctiondemo()">Pulsame cambio header</button>
+<button type="button" onclick="myFunctionalert()">Pulsame alert!</button>
+<button type="button" onclick="myFunctiondemo1()">Pulsame otro cambio header</button>
+
+<div id="demo">
+  <div id="container">
+
+    <div id ="header">
+     <h1>Sitio web de Haly1965 (SCM)</h1>
+    </div> <!--fin de header-->
+
+    <div id="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Sobre mi</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="http://scm-cum.blogspot.com.es">Mi Blog</a></li>
+      </ul>
+     </div> <!-- fin de menu-->
+
+  <div id="mainContainer">
+
+    <div id ="content">
+     <h2>Contenido 1</h2>
+     <p>Información del bloque Contenido 1</p>
+     <h2>Contenido 2</h2>
+     <p>Información del bloque Contenido 2</p>
+    </div> <!--fin del content-->
+ 
+   <div id="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li>Menu opcion 1</li>
+        <li>Menu opcion 2</li>
+        <li>Menu opcion 3</li>
+       </ul>
+    </div> <!-- fin de sidebar-->
+   
+    <div id="footer">
+     <p> Sistemas de comunicación Multimedia</p>
+    </div> <!-- fin de footer-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0">
+</script>
+<div class="fb-like" data-href="https://scm-cum.blogspot.com/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true">
+</div>
+  
+</div>  <!-- fin de mainContainer-->
+</div> <!--fin de container-->
+</div> <!-- fin de demo-->
+
+<script>
+document.oncontextmenu = function(){return false;}
+</script>
+</body>
+</html>
